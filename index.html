@@ -31,6 +31,44 @@ footer{padding:26px 0 38px;display:flex;justify-content:space-between;gap:15px;c
 
 /* Reference-inspired hero layout, original cream and yellow palette */
 .hero{padding:85px 0 32px;overflow:visible;background:radial-gradient(ellipse at 78% 45%,#e9e3d2 0,transparent 58%)}.hero-grid{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);align-items:center;gap:70px;min-height:480px}.hero-name{font:700 clamp(32px,4.4vw,56px)/1.12 'Space Grotesk',sans-serif;color:var(--ink);letter-spacing:-1.8px;margin-top:24px}.hero h1{font-size:clamp(38px,5vw,68px);letter-spacing:-2.5px;line-height:1.05;margin:12px 0 24px}.hero h1 .soft{display:block;font-size:.65em;line-height:1.18;color:#73736e;margin-top:12px;letter-spacing:-1px}.hero-copy{color:#565650;font-size:16px;line-height:1.75}.hero-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px}.hero-tags span{background:#eae7dc;border:1px solid var(--line);border-radius:20px;padding:5px 12px;font-size:12px}.portrait{width:min(100%,340px);aspect-ratio:1;margin:auto;border:1px solid var(--line);border-radius:24px;overflow:hidden;background:var(--card);position:relative}.portrait img{width:100%;height:100%;object-fit:cover}.portrait-placeholder{display:none;position:absolute;inset:0;place-content:center;text-align:center;color:var(--muted)}.portrait.missing .portrait-placeholder{display:grid}.portrait-placeholder strong{font-size:70px;color:#aaa79d}.portrait-placeholder span{font-size:13px}.hero-bottom{margin-top:45px}header .btn-outline{color:white;border-color:#777}@media(max-width:760px){.hero-grid{grid-template-columns:1fr;gap:32px}.hero{padding-top:45px}.portrait{width:min(100%,290px)}.hero h1{font-size:clamp(38px,8vw,58px)}}
+
+/* Contact section: accessible details and clear ways to connect */
+.contact-box{display:block}
+.contact-header{display:flex;align-items:flex-start;justify-content:space-between;gap:26px}
+.contact-header>div{max-width:780px}
+.contact-header p{line-height:1.7;max-width:760px}
+.contact-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px;margin-top:30px}
+.contact-link{display:flex;align-items:center;gap:13px;padding:17px 18px;background:#fff9db;border:1px solid #d4b73c;border-radius:14px;min-width:0;transition:transform .2s,background .2s}
+.contact-link:hover{background:#fffef1;transform:translateY(-2px)}
+.contact-link .symbol{flex:none;width:40px;height:40px;border-radius:12px;background:var(--ink);color:var(--yellow);display:grid;place-items:center;font-size:18px;font-weight:700}
+.contact-link .link-details{min-width:0}.contact-link small{display:block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#6b602f;margin-bottom:4px}
+.contact-link strong{display:block;font-size:14px;overflow-wrap:anywhere;line-height:1.5;color:var(--ink)}
+@media(max-width:760px){.contact-header{flex-direction:column}.contact-header .btn{width:100%}.contact-links{grid-template-columns:1fr}}
+
+/* Contact section — redesigned, accessible, fully linked */
+.contact-box.contact-v2{background:#1c1d1a;color:#f8f6eb;border-radius:28px;padding:0;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:0;overflow:hidden;box-shadow:0 22px 55px rgba(23,23,23,.12)}
+.contact-v2 .contact-feature{padding:clamp(28px,4.5vw,54px);background:var(--yellow);color:var(--ink);display:flex;flex-direction:column;justify-content:space-between;position:relative;isolation:isolate;overflow:hidden}
+.contact-v2 .contact-feature:after{content:'↗';position:absolute;right:-26px;bottom:-78px;font:700 300px/1 'Space Grotesk',sans-serif;color:rgba(23,23,23,.065);z-index:-1}
+.contact-v2 .contact-feature .section-kicker{color:#5d501d;letter-spacing:1.5px;font-size:12px}
+.contact-v2 h2{font:700 clamp(36px,4.5vw,60px)/1.04 'Space Grotesk',sans-serif;letter-spacing:-2.3px;margin:12px 0 22px}
+.contact-v2 .contact-feature p{font-size:15px;line-height:1.85;color:#59502b;max-width:390px}
+.contact-v2 .contact-cta{display:inline-flex;align-items:center;justify-content:space-between;gap:30px;background:#171717;color:#fff;border-radius:14px;padding:16px 19px;font-weight:700;font-size:14px;align-self:flex-start;min-width:205px;margin-top:32px;transition:transform .2s,box-shadow .2s}
+.contact-v2 .contact-cta:hover{transform:translateY(-3px);box-shadow:0 9px 22px #17171730}
+.contact-v2 .contact-details{padding:clamp(24px,4vw,45px);background:#20211e;color:#f8f6eb}
+.contact-v2 .contact-details-title{font:600 21px 'Space Grotesk',sans-serif;margin:0 0 6px;color:#fff}
+.contact-v2 .contact-details-subtitle{color:#afafa8;font-size:13px;line-height:1.6;margin:0 0 22px}
+.contact-v2 .contact-links{display:grid;grid-template-columns:1fr;gap:10px;margin:0}
+.contact-v2 .contact-link{display:flex;align-items:center;gap:14px;background:#2b2c28;border:1px solid #41423b;border-radius:14px;padding:14px 16px;color:#fff;min-width:0;transition:background .2s,border-color .2s,transform .2s}
+.contact-v2 .contact-link:hover,.contact-v2 .contact-link:focus-visible{background:#35372f;border-color:var(--yellow);transform:translateX(4px);outline:0}
+.contact-v2 .contact-link .symbol{flex:none;width:44px;height:44px;border-radius:12px;background:#454537;color:var(--yellow);display:grid;place-items:center;font:700 17px 'Space Grotesk',sans-serif}
+.contact-v2 .contact-link .link-details{min-width:0;flex:1}.contact-v2 .contact-link small{color:#bdbdb5;font-size:10px;letter-spacing:1.5px;margin-bottom:5px;display:block;text-transform:uppercase;font-weight:700}
+.contact-v2 .contact-link strong{color:#f8f6eb;font-weight:600;font-size:13px;line-height:1.45;overflow-wrap:anywhere}
+.contact-v2 .contact-link .arrow{color:var(--yellow);font-size:20px;flex:none;line-height:1}
+.contact-v2 .contact-location,.contact-v2 .contact-location:hover{background:#2b2c28;border-color:#41423b;transform:none;cursor:default}
+.contact-v2 .contact-note{font-size:11px;color:#a5a69d;line-height:1.65;margin:20px 0 0}
+@media(max-width:790px){.contact-box.contact-v2{grid-template-columns:1fr}.contact-v2 .contact-cta{margin-top:24px}.contact-v2 .contact-feature{padding:32px}.contact-v2 .contact-details{padding:30px}}
+@media(max-width:480px){.contact-v2 .contact-feature,.contact-v2 .contact-details{padding:24px}.contact-v2 h2{font-size:38px}.contact-v2 .contact-link{padding:12px}.contact-v2 .contact-link .symbol{width:40px;height:40px}.contact-v2 .contact-link strong{font-size:12px}}
+
 </style>
 </head>
 <body>
@@ -42,7 +80,7 @@ footer{padding:26px 0 38px;display:flex;justify-content:space-between;gap:15px;c
 <div class="nav-actions"><a class="btn btn-outline resume" href="#journey">Career history ↗</a><a class="btn btn-yellow" href="#contact">Contact</a><button aria-label="Toggle navigation" class="menu-toggle" id="menuToggle">☰</button></div>
 </header>
 <main>
-<section class="hero wrap" id="home"><div class="hero-grid"><div class="hero-text"><div class="eyebrow">Engineering Beyond Code</div><div class="hero-tags"><span>PHP</span><span>Laravel</span><span>MySQL</span><span>Redis</span><span>REST APIs</span></div><div class="hero-name">Hi, I’m Rizwan.</div><h1>Senior Backend<br/>Software Engineer</h1><p class="hero-copy">I'm a Senior Backend Software Engineer with 5 years of professional experience in designing, developing and maintaining scalable web applications, enterprise platforms and seamless system integrations. I specialize in transforming complex business requirements into secure, reliable and maintainable software solutions, with a strong focus on backend architecture, API engineering, database optimization and application performance.</p><div class="hero-actions"><a class="btn btn-dark" href="#projects">Explore my work ↗</a><a class="btn btn-outline" href="#contact">Let's connect</a></div></div><div class="portrait"><img alt="Rizwan Ali Siddiqui" onerror="this.hidden=true;this.parentElement.classList.add('missing')" src="profile.jpg"/><div class="portrait-placeholder"><strong>RA</strong><span>Professional portrait</span></div></div></div>
+<section class="hero wrap" id="home"><div class="hero-grid"><div class="hero-text"><div class="eyebrow">Engineering Beyond Code</div><div class="hero-tags"><span>PHP</span><span>Laravel</span><span>MySQL</span><span>MongoDB</span><span>Redis</span><span>REST APIs</span><span>JavaScript</span><span>HTML</span><span>CSS</span><span>GitHub</span><span>Bash</span><span>Java</span></div><div class="hero-name">Hi, I’m Rizwan.</div><h1>Senior Backend<br/>Software Engineer</h1><p class="hero-copy">I'm a Senior Backend Software Engineer with 5 years of professional experience in designing, developing and maintaining scalable web applications, enterprise platforms and seamless system integrations. I specialize in transforming complex business requirements into secure, reliable and maintainable software solutions, with a strong focus on backend architecture, API engineering, database optimization and application performance.</p><div class="hero-actions"><a class="btn btn-dark" href="#projects">Explore my work ↗</a><a class="btn btn-outline" href="#contact">Let's connect</a></div></div><div class="portrait"><img alt="Rizwan Ali Siddiqui" onerror="this.hidden=true;this.parentElement.classList.add('missing')" src="profile.jpg"/><div class="portrait-placeholder"><strong>RA</strong><span>Professional portrait</span></div></div></div>
 
 
 
@@ -98,7 +136,28 @@ footer{padding:26px 0 38px;display:flex;justify-content:space-between;gap:15px;c
 </div>
 </section>
 <section class="section wrap" id="contact">
-<div class="contact-box"><div><div class="section-kicker" style="color:#6b602f">Have a project or opportunity?</div><h2>Let's build something<br/>meaningful.</h2><p>I am open to Senior PHP Developer, Senior Laravel Developer and backend engineering opportunities, particularly enterprise applications, API platforms and integration-heavy products. Based in Navi Mumbai, India.</p></div><a class="btn" href="mailto:siddiquirizwan1997@gmail.com">Get in touch ↗</a></div>
+<div class="contact-box contact-v2">
+  <div class="contact-feature">
+    <div>
+      <div class="section-kicker">Have a project or opportunity?</div>
+      <h2>Let's make<br/>something great.</h2>
+      <p>I'm open to Senior PHP / Laravel roles, backend engineering opportunities, and thoughtful collaborations. Have an idea or a role in mind? I'd love to hear from you.</p>
+    </div>
+    <a class="contact-cta" href="mailto:siddiquirizwan1997@gmail.com?subject=Let%27s%20connect%20%E2%80%94%20Portfolio%20inquiry" aria-label="Send Rizwan an email">Let's talk <span aria-hidden="true">↗</span></a>
+  </div>
+  <div class="contact-details">
+    <h3 class="contact-details-title">Find me here.</h3>
+    <p class="contact-details-subtitle">Choose whichever way works best for you.</p>
+    <div class="contact-links">
+      <a class="contact-link" href="mailto:siddiquirizwan1997@gmail.com" aria-label="Email siddiquirizwan1997@gmail.com"><span class="symbol" aria-hidden="true">✉</span><span class="link-details"><small>Email</small><strong>siddiquirizwan1997@gmail.com</strong></span><span class="arrow" aria-hidden="true">↗</span></a>
+      <a class="contact-link" href="tel:+919167536561" aria-label="Call +91 91675 36561"><span class="symbol" aria-hidden="true">☎</span><span class="link-details"><small>Call me</small><strong>+91 91675 36561</strong></span><span class="arrow" aria-hidden="true">↗</span></a>
+      <a class="contact-link" href="https://www.linkedin.com/in/rizwan-ali-siddiqui" target="_blank" rel="noopener noreferrer" aria-label="Visit Rizwan's LinkedIn profile"><span class="symbol" aria-hidden="true">in</span><span class="link-details"><small>LinkedIn</small><strong>Connect with me on LinkedIn</strong></span><span class="arrow" aria-hidden="true">↗</span></a>
+      <a class="contact-link" href="https://github.com/siddiquirizwan1997-maker" target="_blank" rel="noopener noreferrer" aria-label="Visit Rizwan's GitHub profile"><span class="symbol" aria-hidden="true">⌘</span><span class="link-details"><small>GitHub</small><strong>Explore my code on GitHub</strong></span><span class="arrow" aria-hidden="true">↗</span></a>
+      <div class="contact-link contact-location"><span class="symbol" aria-hidden="true">⌖</span><span class="link-details"><small>Based in</small><strong>Navi Mumbai, Maharashtra, India</strong></span></div>
+    </div>
+    <p class="contact-note">Open to opportunities and collaborations · Based in Navi Mumbai, India</p>
+  </div>
+</div>
 </section>
 </main>
 <footer class="wrap"><span>© 2026 Rizwan Ali Siddiqui · Built with care.</span><span>Backend engineering · Navi Mumbai, India</span></footer>
