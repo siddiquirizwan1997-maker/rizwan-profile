@@ -1,0 +1,2 @@
+import {approved,load} from '../lib/activity.js';
+export default async function handler(req,res){res.setHeader('Cache-Control','no-store');if(req.method!=='GET')return res.status(405).json({error:'method_not_allowed'});if(!approved())return res.status(403).json({error:'publication_disabled'});try{const s=await load();return s?res.status(200).json(s):res.status(503).json({error:'awaiting_first_sync'});}catch{return res.status(503).json({error:'activity_unavailable'});}}
